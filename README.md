@@ -74,6 +74,33 @@ def handshakes(prob:float):
 
 ```
 
+## Fibanocci Series
+0,1,1,2,3,5,8,13,21,34
+series follows as, even, odd, odd, even, odd, odd, even, ...
+
+*** Even numbers ***
+a,b=0,2
+a,b=b,a+4*b
+
+** all numbers **
+a,b = 0,1
+a,b = b,a+b
+
+** recursive method (not good resource-wise) **
+def fibanocci(n:int):
+    if n<=1:
+        return n
+    else:
+        return fibanocci(n-1) + fibanocci(n-2)
+
+for i in range(10):
+    print(fibanocci(i))
+
+![image](https://github.com/Vipinkthomas/DSAL/assets/63467577/88d30964-f4b1-4cfd-811f-d4ed9e203f70)
+
+calculating Fibonacci(5) : 
+it computes the value of Fibonacci(2) three times, and the value of Fibonacci(1) five times. That just gets worse and worse the higher the number you want to compute.
+
 ## Prime Factorisation
 ### Inefficient method (Brute Force)
 use 1..n 
