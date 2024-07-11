@@ -2,8 +2,9 @@
 Data Structures and Algorithms - Python
 ## GCD
 ### Common Algo
-def gcd(a,b):
 
+```
+def gcd(a,b):
     result = min(a,b)
 
     for _ in range(result,0,-1):
@@ -12,8 +13,10 @@ def gcd(a,b):
         else:
             result  = result - 1
     return result
+```
             
 ### Euclidean Algo
+```
 def GCD_eculidean(a:int,b:int):
     # a or b == 0 break recursal
     if a == 0:
@@ -28,7 +31,8 @@ def GCD_eculidean(a:int,b:int):
     # recursal when a>b or b>a
     elif a > b:
         return GCD_eculidean(a - b, b)
-    return GCD_eculidean(a, b-a) 
+    return GCD_eculidean(a, b-a)
+```
 ## Birthday Paradox
 
 ## Prime Factorisation
