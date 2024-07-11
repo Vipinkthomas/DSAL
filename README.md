@@ -34,6 +34,45 @@ def GCD_eculidean(a:int,b:int):
     return GCD_eculidean(a, b-a)
 ```
 ## Birthday Paradox
+*** Taylors Series ***
+e^x = 1 + x + (x^2)/2! + ...
+e^x ~ 1 + x (when x << 1)
+
+P(same) = 1 - P(different)
+
+P(different) = 1 * (364/365) * (363/365) * (362/365) .. (1-((n-1)/365))
+
+using Taylors series,
+
+x ==   - a / 365
+
+e^(-1/365) ~ 1 - (a/365)
+
+P(different) can be rearranged as ,  P(different) =1*  (1- 1/365) * (1- 2/365) * (1- 3/365) .. (1- n-1/365)
+
+P(different) ~ 1* e^(-1/365) * e^(-2/365) * e^(-3/365) .. * e^(-(n-1)/365)
+
+                   ~ 1 * e^-(n*(n-1)/(2*365))
+
+P(same) ~ 1 - e^-(n*(n-1)/(2*365))
+
+e^-(n^2/(2*365)) ~ 1- P(same)
+
+(n^2)/(2*365) ~ ln (1/ (1 - P(same))) 
+
+approx formula for finding least number of people need to have  P(same) of handshakes
+n ~ sqrt( (2*365) *ln(1/(1- P(same)))
+
+```
+#n ~ sqrt( (2*365) *ln(1/(1- P(same)))
+from math import log as ln
+from math import sqrt,ceil
+def handshakes(prob:float):
+    if prob == 1:
+        return 367
+    return ceil(sqrt((2*365)* ln(1/(1-prob))))
+
+```
 
 ## Prime Factorisation
 ### Inefficient method (Brute Force)
