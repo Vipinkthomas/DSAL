@@ -34,7 +34,9 @@ def GCD_eculidean(a:int,b:int):
     return GCD_eculidean(a, b-a)
 ```
 ## Birthday Paradox
-*** Taylors Series ***
+
+** Taylors Series **
+
 e^x = 1 + x + (x^2)/2! + ...
 e^x ~ 1 + x (when x << 1)
 
@@ -78,15 +80,18 @@ def handshakes(prob:float):
 0,1,1,2,3,5,8,13,21,34
 series follows as, even, odd, odd, even, odd, odd, even, ...
 
-*** Even numbers ***
+** Even numbers **
+
 a,b=0,2
 a,b=b,a+4*b
 
 ** all numbers **
+
 a,b = 0,1
 a,b = b,a+b
 
 ** recursive method (not good resource-wise) **
+
 ```
 def fibanocci(n:int):
     if n<=1:
