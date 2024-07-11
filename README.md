@@ -87,6 +87,7 @@ a,b = 0,1
 a,b = b,a+b
 
 ** recursive method (not good resource-wise) **
+```
 def fibanocci(n:int):
     if n<=1:
         return n
@@ -95,6 +96,8 @@ def fibanocci(n:int):
 
 for i in range(10):
     print(fibanocci(i))
+
+```
 
 ![image](https://github.com/Vipinkthomas/DSAL/assets/63467577/88d30964-f4b1-4cfd-811f-d4ed9e203f70)
 
