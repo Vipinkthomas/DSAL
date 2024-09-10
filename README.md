@@ -1,5 +1,131 @@
 # DSAL
 Data Structures and Algorithms - Python
+
+## Data Structure Complexity
+
+<table> 
+    <thead>
+        <tr>
+        <th rowspan="2">Data Structure</th>
+        <th colspan="4">Average Time Complexity</th>
+        <th colspan="4">Worst Time Complexity</th>
+        <th colspan="2">Space Complexity</th>
+        <th rowspan="2">Desc</th>
+        </tr>
+        <tr>
+        <th>nth element acess</th>
+        <th>Search</th>
+        <th>Insertion</th>
+        <th>Deletion</th>
+        <th>nth element acess</th>
+        <th>Search</th>
+        <th>Insertion</th>
+        <th>Deletion</th>
+        <th>Intrinsic</th>
+        <th>Auxilary</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Arrays</td>
+        <td>O(1)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(1)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(1)</td>
+        <td>Intrinsic space complexity-> storage for elements, auxilary -> space need to run operations like insert, delete and search (recursive/iterative)</td>
+    </tr>
+    <tr>
+        <td>Stacks</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(1)</td>
+        <td>O(1)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(1)</td>
+        <td>O(1)</td>
+        <td>O(n)</td>
+        <td>O(1)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Queues</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(1)</td>
+        <td>O(1)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(1)</td>
+        <td>O(1)</td>
+        <td>O(n)</td>
+        <td>O(1)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Binary Tree</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(1)-iterative or O(n)-recursive</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Binary Search Tree (BST)</td>
+        <td>O(logn)</td>
+        <td>O(logn)</td>
+        <td>O(logn)</td>
+        <td>O(logn)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(1)-iterative or O(n)-recursive</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Balanced BST</td>
+        <td>O(logn)</td>
+        <td>O(logn)</td>
+        <td>O(logn)</td>
+        <td>O(logn)</td>
+        <td>O(logn)</td>
+        <td>O(logn)</td>
+        <td>O(logn)</td>
+        <td>O(logn)</td>
+        <td>O(n)</td>
+        <td>O(1)-iterative or O(logn)-recursive</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Hash Table</td>
+        <td>N/A</td>
+        <td>O(1)</td>
+        <td>O(1)</td>
+        <td>O(1)</td>
+        <td>N/A</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>bucket+elements O(m+n)-> O(n)</td>
+        <td>O(1)-iterative</td>
+        <td>to maintain efficiency load factor(a=n/m) sould be less than 0.7, in practice n/m is usually kept as 1. recursive data structure to store elements is uncommon</td>
+    </tr>
+    </tbody>
+</table>
 ## GCD
 ### Common Algo
 
