@@ -126,6 +126,109 @@ Data Structures and Algorithms - Python
     </tr>
     </tbody>
 </table>
+
+## Sorting Algo
+# bubble sort
+```
+# bubble sort
+def BubbleSort(arr):
+    times_ran=0
+    for i in range(len(arr)-1,0,-1):
+        swapped=False
+        for j in range(0,i):
+            if arr[j]>arr[j+1]:
+                temp=arr[j]
+                arr[j]=arr[j+1]
+                arr[j+1]=temp
+                swapped=True
+            times_ran+=1
+            print(j,arr)
+        if not swapped:
+            break
+    return arr,times_ran
+
+BubbleSort([1,2,3,4,5,6])
+
+```
+Insertion Sort
+```
+# Insertion sort
+def InsertionSort(arr):
+    times_ran=0
+    for i in range(1,len(arr)):
+        key = arr[i]
+        j= i-1
+        times_ran+=1
+        while j>=0 and arr[j]>key:
+            arr[j+1]=arr[j]
+            j-=1
+            times_ran+=1
+        arr[j+1]=key
+
+    return arr,times_ran
+
+InsertionSort([1,2,3,4,5,6])
+
+```
+Selection Sort
+
+```
+# Selection Sort
+def selectionSort(arr):
+    times_ran=0
+    for i in range(0,len(arr)):
+        times_ran+=1
+        min_index=i
+        for j in range(i+1,len(arr)):
+            times_ran+=1
+            if arr[min_index]>arr[j]:
+                min_index=j
+        arr[i],arr[min_index]=arr[min_index],arr[i]
+        print(arr)
+
+    return arr,times_ran
+selectionSort([6,5,4,3,2,1])
+```
+Merge Sort
+
+```
+# Merge Sort
+def mergeSort(arr,times_ran=0):
+    times_ran+=1
+    if len(arr)<=1:
+        return arr
+    
+    mid = len(arr)//2
+
+    left = mergeSort(arr[:mid],times_ran)
+    right = mergeSort(arr[mid:],times_ran)
+    
+    return merge(left,right,times_ran)
+
+def merge(left,right,times_ran=0):
+    sorted_list = []
+    i=j=0
+
+    while i<len(left) and j<len(right):
+        times_ran+=1
+        if left[i]<right[j]:
+            sorted_list.append(left[i])
+            i+=1
+        else:
+            sorted_list.append(right[j])
+            j+=1
+    sorted_list.extend(left[i:])
+    sorted_list.extend(right[j:])
+    print(times_ran,left,right,sorted_list)
+    return sorted_list
+
+mergeSort([6,5,4,3,2,1])       
+
+```
+
+
+
+
 ## GCD
 ### Common Algo
 
