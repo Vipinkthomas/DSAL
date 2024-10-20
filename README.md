@@ -128,6 +128,84 @@ Data Structures and Algorithms - Python
 </table>
 
 ## Sorting Algo
+
+<table> 
+    <thead>
+        <tr>
+        <th rowspan="2">Sorting Algorithm</th>
+        <th colspan="3">Time Complexity</th>
+        <th colspan="2">Space Complexity</th>
+        <th rowspan="2">Stable</th>
+        <th rowspan="2">Sorting Class</th>
+        <th rowspan="2">Remarks</th>
+        </tr>
+        <tr>
+        <th>Best Case</th>
+        <th>Average Case</th>
+        <th>Worst Case</th>
+        <th>Intrinsic</th>
+        <th>Auxilary</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Bubble Sort</td>
+        <td>O(n)</td>
+        <td>O(n^2)</td>
+        <td>O(n^2)</td>
+        <td>O(n)</td>
+        <td>O(1)</td>
+        <td>Yes</td>
+        <td>Comparison</td>
+        <td>Not preferred</td>
+    </tr>
+    <tr>
+        <td>Insertion Sort</td>
+        <td>O(n)</td>
+        <td>O(n^2)</td>
+        <td>O(n^2)</td>
+        <td>O(n)</td>
+        <td>O(1)</td>
+        <td>Yes</td>
+        <td>Comparison</td>
+        <td>stable sort: it preserve relative order of equal elements. efficient for small or nearly ordered lists.  works as part of Timesort : Merge sort and insertion sort. In best case, every insert takes constant time</td>
+    </tr>
+    <tr>
+        <td>Selection Sort</td>
+        <td>O(n^2)</td>
+        <td>O(n^2)</td>
+        <td>O(n^2)</td>
+        <td>O(n)</td>
+        <td>O(1)</td>
+        <td>No</td>
+        <td>Comparison</td>
+        <td> it even takes ~ n^2 times to processe sorted array.</td>
+    </tr>
+    <tr>
+        <td>Merge Sort</td>
+        <td>O(nlogn)</td>
+        <td>O(nlogn)</td>
+        <td>O(nlogn)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>Yes</td>
+        <td>Comparison</td>
+        <td>stable sort. part of timesort</td>
+    </tr>
+    <tr>
+        <td>Quick Sort</td>
+        <td>O(nlogn)</td>
+        <td>O(nlogn)</td>
+        <td>O(nlogn)</td>
+        <td>O(n)</td>
+        <td>O(n)</td>
+        <td>Yes</td>
+        <td>Comparison</td>
+        <td>stable sort: it preserve relative order of equal elements. efficient for small or nearly ordered lists.  works as part of Timesort : Merge sort and insertion sort. In best case, every insert takes constant time</td>
+    </tr>
+    </tbody>
+</table>
+
 # bubble sort
 ```
 # bubble sort
